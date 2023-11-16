@@ -100,6 +100,7 @@ public class ImportWorldCmd implements Subcommand {
                                     case "spawnx" -> spawn.append(world.getPropertyMap().getValue(SlimeProperties.SPAWN_X)).append(", ");
                                     case "spawny" -> spawn.append(world.getPropertyMap().getValue(SlimeProperties.SPAWN_Y)).append(", ");
                                     case "spawnz" -> spawn.append(world.getPropertyMap().getValue(SlimeProperties.SPAWN_Z));
+                                    case "spawnangle" -> worldData.setSpawnAngle(world.getPropertyMap().getValue(SlimeProperties.SPAWN_ANGLE));
                                     case "environment" -> worldData.setEnvironment(world.getPropertyMap().getValue(SlimeProperties.ENVIRONMENT));
                                     case "difficulty" -> worldData.setDifficulty(world.getPropertyMap().getValue(SlimeProperties.DIFFICULTY).toLowerCase());
                                     case "allowmonsters" -> worldData.setAllowMonsters(world.getPropertyMap().getValue(SlimeProperties.ALLOW_MONSTERS));

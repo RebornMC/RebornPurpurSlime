@@ -17,6 +17,9 @@ public class WorldData {
     @Setting("spawn")
     private String spawn = "0.5, 255, 0.5";
 
+    @Setting("spawnAngle")
+    private float spawnAngle = 0;
+
     @Setting("difficulty")
     private String difficulty = "peaceful";
 
@@ -123,6 +126,14 @@ public class WorldData {
 
     public void setSpawn(String spawn) {
         this.spawn = spawn;
+    }
+
+    public float getSpawnAngle() {
+        return this.spawnAngle;
+    }
+
+    public void setSpawnAngle(float spawnAngle) {
+        this.spawnAngle = spawnAngle;
     }
 
     public String getDifficulty() {
