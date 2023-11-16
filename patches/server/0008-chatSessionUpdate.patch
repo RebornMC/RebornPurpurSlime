@@ -1,0 +1,28 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: iVirus <edoardomannino@gmail.com>
+Date: Thu, 16 Nov 2023 01:32:50 +0100
+Subject: [PATCH] chatSessionUpdate
+
+
+diff --git a/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java b/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java
+index 4b6c5ecba421b14ff07789042199ca9af5b81ea7..e9d8ad472bf494570fb292bab59d366f63a90369 100644
+--- a/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java
++++ b/src/main/java/net/minecraft/server/network/ServerGamePacketListenerImpl.java
+@@ -3509,7 +3509,7 @@ public class ServerGamePacketListenerImpl extends ServerCommonPacketListenerImpl
+ 
+     @Override
+     public void handleChatSessionUpdate(ServerboundChatSessionUpdatePacket packet) {
+-        PacketUtils.ensureRunningOnSameThread(packet, this, this.player.serverLevel());
++        /*PacketUtils.ensureRunningOnSameThread(packet, this, this.player.serverLevel());
+         RemoteChatSession.Data remotechatsession_a = packet.chatSession();
+         ProfilePublicKey.Data profilepublickey_a = this.chatSession != null ? this.chatSession.profilePublicKey().data() : null;
+         ProfilePublicKey.Data profilepublickey_a1 = remotechatsession_a.profilePublicKey();
+@@ -3533,7 +3533,7 @@ public class ServerGamePacketListenerImpl extends ServerCommonPacketListenerImpl
+                 }
+ 
+             }
+-        }
++        }*/
+     }
+ 
+     @Override
